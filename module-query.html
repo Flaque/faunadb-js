@@ -2411,7 +2411,8 @@ for per-function documentation.</p></div>
     <div class="description">
         <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#basic-forms">docs</a>.</p>
 <p>Invokes a given function passing in the provided arguments</p>
-<pre class="prettyprint source"><code>Call(Ref(&quot;functions/a_function&quot;), 1, 2)</code></pre>
+<pre class="prettyprint source"><code>Call(Ref(&quot;functions/a_function&quot;), 1, 2)
+</code></pre>
     </div>
     
 
@@ -3063,6 +3064,15 @@ for per-function documentation.</p></div>
     
 
 	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">Deprecated:</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>Class is deprecated, use Collection instead</li>
+        </ul>
+    </dd>
+    
+    
 
 	
 
@@ -3197,6 +3207,359 @@ for per-function documentation.</p></div>
             
 
             <td class="description last"><p>The Ref of the class set's scope.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Collection"><span class="type-signature">&lt;inner> </span>Collection(name [, scope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#miscellaneous-functions">docs</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The name of the collection.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The Ref of the collection's scope.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Collections"><span class="type-signature">&lt;inner> </span>Collections( [scope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#miscellaneous-functions">docs</a>.</p>
+<p>Constructs a <code>collections</code> function that, when evaluated, returns a Ref value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The Ref of the collection set's scope.</p></td>
         </tr>
 
     
@@ -4022,7 +4385,7 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>The Ref (usually a ClassRef) to create.</p></td>
+            <td class="description last"><p>The Ref (usually a CollectionRef) to create.</p></td>
         </tr>
 
     
@@ -4056,7 +4419,7 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>An object representing the parameters of the instance.</p></td>
+            <td class="description last"><p>An object representing the parameters of the document.</p></td>
         </tr>
 
     
@@ -4204,8 +4567,166 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>An object of parameters used to create a class.</p>
-<pre class="prettyprint source"><code>- name (required): the name of the class to create</code></pre></td>
+            <td class="description last"><p>An object of parameters used to create a class.
+- name (required): the name of the class to create</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">Deprecated:</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>use CreateCollection instead</li>
+        </ul>
+    </dd>
+    
+    
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~CreateCollection"><span class="type-signature">&lt;inner> </span>CreateCollection(params)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#write-functions">docs</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An object of parameters used to create a collection.
+- name (required): the name of the collection to create</p></td>
         </tr>
 
     
@@ -4353,8 +4874,8 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>An object of parameters used to create a database.</p>
-<pre class="prettyprint source"><code>- name (required): the name of the database to create</code></pre></td>
+            <td class="description last"><p>An object of parameters used to create a database.
+- name (required): the name of the database to create</p></td>
         </tr>
 
     
@@ -4502,9 +5023,9 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>An objet of parameters used to create a new user defined function.</p>
-<pre class="prettyprint source"><code>- name: The name of the function
-- body: A lambda function (escaped with `query`).</code></pre></td>
+            <td class="description last"><p>An object of parameters used to create a new user defined function.
+- name: The name of the function
+- body: A lambda function (escaped with <code>query</code>).</p></td>
         </tr>
 
     
@@ -4652,13 +5173,13 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>An object of parameters used to create an index.</p>
-<pre class="prettyprint source"><code>- name (required): the name of the index to create
-- source: One or more source objects describing source classes and (optional) field bindings.
+            <td class="description last"><p>An object of parameters used to create an index.
+- name (required): the name of the index to create
+- source: One or more source objects describing source collections and (optional) field bindings.
 - terms: An array of term objects describing the fields to be indexed. Optional
 - values: An array of value objects describing the fields to be covered. Optional
 - unique: If true, maintains a uniqueness constraint on combined terms and values. Optional
-- partitions: The number of sub-partitions within each term. Optional</code></pre></td>
+- partitions: The number of sub-partitions within each term. Optional</p></td>
         </tr>
 
     
@@ -4806,9 +5327,160 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>An object of parameters used to create a new key</p>
-<pre class="prettyprint source"><code>- database: Ref of the database the key will be scoped to
-- role: The role of the new key</code></pre></td>
+            <td class="description last"><p>An object of parameters used to create a new key
+- database: Ref of the database the key will be scoped to. Optional.
+- role: The role of the new key</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~CreateRole"><span class="type-signature">&lt;inner> </span>CreateRole(params)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#write-functions">docs</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An object of parameters used to create a new role.
+- name: The name of the role
+- privileges: An array of privileges
+- membership: An array of membership bindings</p></td>
         </tr>
 
     
@@ -5471,6 +6143,450 @@ for per-function documentation.</p></div>
             
 
             <td class="description last"><p>A string to convert to a Date object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~DayOfMonth"><span class="type-signature">&lt;inner> </span>DayOfMonth(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's day of the month, from 1 to 31.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to day of month.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~DayOfWeek"><span class="type-signature">&lt;inner> </span>DayOfWeek(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's day of the week following ISO-8601 convention, from 1 (Monday) to 7 (Sunday).</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to day of week.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~DayOfYear"><span class="type-signature">&lt;inner> </span>DayOfYear(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's day of the year, from 1 to 365, or 366 in a leap year.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to day of year.</p></td>
         </tr>
 
     
@@ -7250,7 +8366,7 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>The snapshot time at which to check for the instance's existence.</p></td>
+            <td class="description last"><p>The snapshot time at which to check for the document's existence.</p></td>
         </tr>
 
     
@@ -7673,234 +8789,6 @@ for per-function documentation.</p></div>
             
 <hr>
 <dt>
-    <h4 class="name" id="~FindStr"><span class="type-signature">&lt;inner> </span>FindStr(terms, terms, terms)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A string to search.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Find the first position of this string in the search string</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>An optional start offset into the search string</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~FindStr"><span class="type-signature">&lt;inner> </span>FindStr(value, find, start)</h4>
     
     
@@ -8109,7 +8997,7 @@ for per-function documentation.</p></div>
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -8309,268 +9197,6 @@ for per-function documentation.</p></div>
     <dd>
         
 <span class="param-type">Array</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~FindStrRegex"><span class="type-signature">&lt;inner> </span>FindStrRegex(terms, terms, terms, terms)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A string to search.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Find the first position of this string in the search string</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>An optional start offset into the search string</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>An optional number of results to return, max 1024</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
 
 
 
@@ -9379,7 +10005,7 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>The snapshot time at which to get the instance.</p></td>
+            <td class="description last"><p>The snapshot time at which to get the document.</p></td>
         </tr>
 
     
@@ -9804,6 +10430,154 @@ for per-function documentation.</p></div>
     
 
     
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Hour"><span class="type-signature">&lt;inner> </span>Hour(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's second of the minute, from 0 to 59.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to a hour.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -11030,7 +11804,7 @@ for per-function documentation.</p></div>
 
             
 
-            <td class="description last"><p>If this is a Create or Update, the parameters of the instance.</p></td>
+            <td class="description last"><p>If this is a Create or Update, the parameters of the document.</p></td>
         </tr>
 
     
@@ -12244,7 +13018,9 @@ documentation.</p>
 <p>Takes a Javascript function, and will transform it
 into the appropriate FaunaDB query. For example:</p>
 <pre class="prettyprint source"><code>Lambda(function(a) { return Add(a, a); });
-// Returns { lambda: 'a', expr: { add: [{ var: a }, { var: a }] } }</code></pre><p>Note that the driver will handle wrapping all usages of the lambda's bound
+// Returns { lambda: 'a', expr: { add: [{ var: a }, { var: a }] } }
+</code></pre>
+<p>Note that the driver will handle wrapping all usages of the lambda's bound
 variables with the modules:query~Var function.</p>
     </div>
     
@@ -12393,7 +13169,7 @@ variables with the modules:query~Var function.</p>
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -12521,154 +13297,6 @@ variables with the modules:query~Var function.</p>
     <dd>
         
 <span class="param-type">int</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~Length"><span class="type-signature">&lt;inner> </span>Length(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to calculate the length in codepoints.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
 
 
 
@@ -13261,8 +13889,8 @@ variables with the modules:query~Var function.</p>
 
             
 
-            <td class="description last"><p>An object of parameters to pass to the login function</p>
-<pre class="prettyprint source"><code>- password: The password used to login</code></pre></td>
+            <td class="description last"><p>An object of parameters to pass to the login function
+- password: The password used to login</p></td>
         </tr>
 
     
@@ -13498,154 +14126,6 @@ variables with the modules:query~Var function.</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="~LowerCase"><span class="type-signature">&lt;inner> </span>LowerCase(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to LowerCase.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~LowerCase"><span class="type-signature">&lt;inner> </span>LowerCase(value)</h4>
     
     
@@ -13654,7 +14134,7 @@ variables with the modules:query~Var function.</p>
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -14118,154 +14598,6 @@ variables with the modules:query~Var function.</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="~LTrim"><span class="type-signature">&lt;inner> </span>LTrim(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to LowerCase.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~LTrim"><span class="type-signature">&lt;inner> </span>LTrim(value)</h4>
     
     
@@ -14274,7 +14606,7 @@ variables with the modules:query~Var function.</p>
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -15105,6 +15437,154 @@ variables with the modules:query~Var function.</p>
             
 <hr>
 <dt>
+    <h4 class="name" id="~Minute"><span class="type-signature">&lt;inner> </span>Minute(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's second of the minute, from 0 to 59.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to a month.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="~Modulo"><span class="type-signature">&lt;inner> </span>Modulo(terms)</h4>
     
     
@@ -15178,6 +15658,154 @@ variables with the modules:query~Var function.</p>
             
 
             <td class="description last"><p>A collection of numbers to compute the quotient of. The remainder will be returned.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Month"><span class="type-signature">&lt;inner> </span>Month(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's month of the year, from 1 to 12.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to a month.</p></td>
         </tr>
 
     
@@ -15638,7 +16266,7 @@ variables with the modules:query~Var function.</p>
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -15734,9 +16362,9 @@ variables with the modules:query~Var function.</p>
 
             
 
-            <td class="description last"><p>An object of options</p>
-<pre class="prettyprint source"><code>- min: The minimum ngram size.
-- max: The maximum ngram size.</code></pre></td>
+            <td class="description last"><p>An object of options
+- min: The minimum ngram size.
+- max: The maximum ngram size.</p></td>
         </tr>
 
     
@@ -16872,7 +17500,8 @@ rather than using this query function directly.</p>
         <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#basic-forms">docs</a>.</p>
 <p>Constructs a <code>@query</code> type using the Lambda() or a function.</p>
 <pre class="prettyprint source"><code>Query(Lambda(['a', 'b'], Add(Var('a'), Var('b'))))
-Query(function (a, b) { return Add(a, b) })</code></pre>
+Query(function (a, b) { return Add(a, b) })
+</code></pre>
     </div>
     
 
@@ -17184,7 +17813,7 @@ Query(function (a, b) { return Add(a, b) })</code></pre>
     
     <div class="description">
         <p>If one parameter is provided, constructs a literal Ref value.
-The string <code>classes/widget/123</code> will be equivalent to <code>new values.Ref('123', new values.Ref('widget', values.Native.CLASSES))</code></p>
+The string <code>collections/widget/123</code> will be equivalent to <code>new values.Ref('123', new values.Ref('widget', values.Native.COLLECTIONS))</code></p>
 <p>If two are provided, constructs a Ref() function that, when evaluated, returns a Ref value.</p>
     </div>
     
@@ -17250,7 +17879,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>Alone, the ref in path form. Combined with <code>id</code>, must be a class ref.</p></td>
+            <td class="description last"><p>Alone, the ref in path form. Combined with <code>id</code>, must be a collection ref.</p></td>
         </tr>
 
     
@@ -17284,7 +17913,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>A numeric id of the given class.</p></td>
+            <td class="description last"><p>A numeric id of the given collection.</p></td>
         </tr>
 
     
@@ -17432,7 +18061,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>The Ref of the instance whose event should be removed.</p></td>
+            <td class="description last"><p>The Ref of the document whose event should be removed.</p></td>
         </tr>
 
     
@@ -17568,200 +18197,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~Repeat"><span class="type-signature">&lt;inner> </span>Repeat(terms, terms)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A string to repeat.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The number of times to repeat the string</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~Repeat"><span class="type-signature">&lt;inner> </span>Repeat(value, number)</h4>
     
     
@@ -17770,7 +18205,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -18022,235 +18457,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>An object representing the parameters of the instance.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~ReplaceStr"><span class="type-signature">&lt;inner> </span>ReplaceStr(terms, terms, terms)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A string to search.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The string to find in the search string</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The string to replace in the search string</p></td>
+            <td class="description last"><p>An object representing the parameters of the document.</p></td>
         </tr>
 
     
@@ -18346,7 +18553,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -18538,268 +18745,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~ReplaceStrRegex"><span class="type-signature">&lt;inner> </span>ReplaceStrRegex(terms, terms, terms, terms)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>A string to search.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The pattern to find in the search string</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The string to replace in the search string</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>terms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>replace all or just the first</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~ReplaceStrRegex"><span class="type-signature">&lt;inner> </span>ReplaceStrRegex(value, pattern, replace, first)</h4>
     
     
@@ -18808,7 +18753,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -19024,6 +18969,359 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
+    <h4 class="name" id="~Role"><span class="type-signature">&lt;inner> </span>Role(name [, scope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#miscellaneous-functions">docs</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The name of the role.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The Ref of the role's scope.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Roles"><span class="type-signature">&lt;inner> </span>Roles( [scope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#miscellaneous-functions">docs</a>.</p>
+<p>Constructs a <code>roles</code> function that, when evaluated, returns a Ref value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The Ref of the role set's scope.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="~Round"><span class="type-signature">&lt;inner> </span>Round(terms, terms)</h4>
     
     
@@ -19218,154 +19516,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~RTrim"><span class="type-signature">&lt;inner> </span>RTrim(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to remove white space from the end.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~RTrim"><span class="type-signature">&lt;inner> </span>RTrim(value)</h4>
     
     
@@ -19374,7 +19524,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -19502,6 +19652,154 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
     <dd>
         
 <span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Second"><span class="type-signature">&lt;inner> </span>Second(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a time expression's second of the minute, from 0 to 59.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to a month.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
 
 
 
@@ -20294,7 +20592,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>The Ref of the instance for which to retrieve the singleton set.</p></td>
+            <td class="description last"><p>The Ref of the document for which to retrieve the singleton set.</p></td>
         </tr>
 
     
@@ -20550,7 +20848,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -20678,154 +20976,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
     <dd>
         
 <span class="param-type">string</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~Space"><span class="type-signature">&lt;inner> </span>Space(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to Space.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
 
 
 
@@ -21002,154 +21152,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~SubString"><span class="type-signature">&lt;inner> </span>SubString(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to SubString.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~SubString"><span class="type-signature">&lt;inner> </span>SubString(value, start, length)</h4>
     
     
@@ -21158,7 +21160,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -22154,7 +22156,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -22282,154 +22284,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
     <dd>
         
 <span class="param-type">string</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~TitleCase"><span class="type-signature">&lt;inner> </span>TitleCase(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to TitleCase.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
 
 
 
@@ -22755,6 +22609,302 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
+    <h4 class="name" id="~ToMicros"><span class="type-signature">&lt;inner> </span>ToMicros(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Converts a time expression to microseconds since the UNIX epoch.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to microsecond numeric value.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~ToMillis"><span class="type-signature">&lt;inner> </span>ToMillis(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Converts a time expression to milliseconds since the UNIX epoch.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to millisecond numeric value.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="~ToNumber"><span class="type-signature">&lt;inner> </span>ToNumber(expression)</h4>
     
     
@@ -22816,6 +22966,154 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 
             <td class="description last"><p>An expression to convert to a number.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~ToSeconds"><span class="type-signature">&lt;inner> </span>ToSeconds(expression)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Converts an expression evaluating to a time to seconds since epoch.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An expression to convert to seconds numeric value.</p></td>
         </tr>
 
     
@@ -23199,154 +23497,6 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~Trim"><span class="type-signature">&lt;inner> </span>Trim(string)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The string to Trim.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Expr.html">Expr</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="~Trim"><span class="type-signature">&lt;inner> </span>Trim(value)</h4>
     
     
@@ -23355,7 +23505,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -23937,7 +24087,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>An object representing the parameters of the instance.</p></td>
+            <td class="description last"><p>An object representing the parameters of the document.</p></td>
         </tr>
 
     
@@ -24033,7 +24183,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string-functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#string-functions">docs</a>.</p>
     </div>
     
 
@@ -24177,7 +24327,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~UpperCase"><span class="type-signature">&lt;inner> </span>UpperCase(string)</h4>
+    <h4 class="name" id="~Var"><span class="type-signature">&lt;inner> </span>Var(varName)</h4>
     
     
 </dt>
@@ -24185,7 +24335,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://fauna.com/documentation/queries#string_functions">docs</a>.</p>
+        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#basic-forms">docs</a>.</p>
     </div>
     
 
@@ -24220,7 +24370,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
         <tr>
             
-                <td class="name"><code>string</code></td>
+                <td class="name"><code>varName</code></td>
             
 
             <td class="type">
@@ -24237,7 +24387,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>The string to Uppercase.</p></td>
+            <td class="description last"><p>The name of the bound var.</p></td>
         </tr>
 
     
@@ -24325,7 +24475,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
             
 <hr>
 <dt>
-    <h4 class="name" id="~Var"><span class="type-signature">&lt;inner> </span>Var(varName)</h4>
+    <h4 class="name" id="~Year"><span class="type-signature">&lt;inner> </span>Year(expression)</h4>
     
     
 </dt>
@@ -24333,7 +24483,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
     
     <div class="description">
-        <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#basic-forms">docs</a>.</p>
+        <p>Returns the time expression's year, following the ISO-8601 standard.</p>
     </div>
     
 
@@ -24368,7 +24518,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
         <tr>
             
-                <td class="name"><code>varName</code></td>
+                <td class="name"><code>expression</code></td>
             
 
             <td class="type">
@@ -24385,7 +24535,7 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
             
 
-            <td class="description last"><p>The name of the bound var.</p></td>
+            <td class="description last"><p>An expression to convert to a year.</p></td>
         </tr>
 
     
@@ -24670,9 +24820,9 @@ The string <code>classes/widget/123</code> will be equivalent to <code>new value
 
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
 	
-		on 2019-02-22T16:16:35+00:00
+		on 2019-07-17T17:35:29+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
