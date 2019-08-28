@@ -9548,6 +9548,182 @@ for per-function documentation.</p></div>
             
 <hr>
 <dt>
+    <h4 class="name" id="~Format"><span class="type-signature">&lt;inner> </span>Format(string, values)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Format values into a string.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>string with format specifiers</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>list of values to format</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a string</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="~FunctionFn"><span class="type-signature">&lt;inner> </span>FunctionFn(name [, scope])</h4>
     
     
@@ -12832,7 +13008,7 @@ for per-function documentation.</p></div>
             
 <hr>
 <dt>
-    <h4 class="name" id="~Lambda"><span class="type-signature">&lt;inner> </span>Lambda(var, expr)</h4>
+    <h4 class="name" id="~Lambda"><span class="type-signature">&lt;inner> </span>Lambda(func)</h4>
     
     
 </dt>
@@ -12841,8 +13017,13 @@ for per-function documentation.</p></div>
     
     <div class="description">
         <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#basic-forms">docs</a>.</p>
-<p>Directly produces a FaunaDB Lambda expression as described in the FaunaDB reference
-documentation.</p>
+<p>Takes a Javascript function, and will transform it
+into the appropriate FaunaDB query. For example:</p>
+<pre class="prettyprint source"><code>Lambda(function(a) { return Add(a, a); });
+// Returns { lambda: 'a', expr: { add: [{ var: a }, { var: a }] } }
+</code></pre>
+<p>Note that the driver will handle wrapping all usages of the lambda's bound
+variables with the modules:query~Var function.</p>
     </div>
     
 
@@ -12877,13 +13058,13 @@ documentation.</p>
 
         <tr>
             
-                <td class="name"><code>var</code></td>
+                <td class="name"><code>func</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+<span class="param-type">function</span>
 
 
 
@@ -12894,31 +13075,7 @@ documentation.</p>
 
             
 
-            <td class="description last"><p>The names of the variables to be bound in this lambda expression.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>expr</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The lambda expression.</p></td>
+            <td class="description last"><p>Takes the provided function and produces the appropriate FaunaDB query expression.</p></td>
         </tr>
 
     
@@ -13006,7 +13163,7 @@ documentation.</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="~Lambda"><span class="type-signature">&lt;inner> </span>Lambda(func)</h4>
+    <h4 class="name" id="~Lambda"><span class="type-signature">&lt;inner> </span>Lambda(var, expr)</h4>
     
     
 </dt>
@@ -13015,13 +13172,8 @@ documentation.</p>
     
     <div class="description">
         <p>See the <a href="https://app.fauna.com/documentation/reference/queryapi#basic-forms">docs</a>.</p>
-<p>Takes a Javascript function, and will transform it
-into the appropriate FaunaDB query. For example:</p>
-<pre class="prettyprint source"><code>Lambda(function(a) { return Add(a, a); });
-// Returns { lambda: 'a', expr: { add: [{ var: a }, { var: a }] } }
-</code></pre>
-<p>Note that the driver will handle wrapping all usages of the lambda's bound
-variables with the modules:query~Var function.</p>
+<p>Directly produces a FaunaDB Lambda expression as described in the FaunaDB reference
+documentation.</p>
     </div>
     
 
@@ -13056,13 +13208,13 @@ variables with the modules:query~Var function.</p>
 
         <tr>
             
-                <td class="name"><code>func</code></td>
+                <td class="name"><code>var</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
 
 
 
@@ -13073,7 +13225,31 @@ variables with the modules:query~Var function.</p>
 
             
 
-            <td class="description last"><p>Takes the provided function and produces the appropriate FaunaDB query expression.</p></td>
+            <td class="description last"><p>The names of the variables to be bound in this lambda expression.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The lambda expression.</p></td>
         </tr>
 
     
@@ -15190,6 +15366,234 @@ variables with the modules:query~Var function.</p>
             
 
             <td class="description last"><p>A collection of numbers to multiply together.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Merge"><span class="type-signature">&lt;inner> </span>Merge(merge, _with, lambda)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Merge two or more objects..</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>merge</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>merge the first object.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_with</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the second object or a list of objects</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lambda</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a lambda to resolve possible conflicts</p></td>
         </tr>
 
     
@@ -17717,6 +18121,398 @@ Query(function (a, b) { return Add(a, b) })
             
 
             <td class="description last"><p>Take degrees and convert the number to radians 2 * pi = 360 degrees</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Range"><span class="type-signature">&lt;inner> </span>Range(set, from, to)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://docs.fauna.com/fauna/current/api/fql/functions/range">docs</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>set</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A SetRef of the source set</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>from</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The lower bound</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>to</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The upper bound</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Expr.html">Expr</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~Reduce"><span class="type-signature">&lt;inner> </span>Reduce(lambda, initial, collection)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See the <a href="https://docs.fauna.com/fauna/current/api/fql/functions/reduce">docs</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lambda</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The accumulator function</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>initial</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The initial value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collection</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-query.html#~ExprArg">module:query~ExprArg</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The colleciton to be reduced</p></td>
         </tr>
 
     
@@ -24822,7 +25618,7 @@ The string <code>collections/widget/123</code> will be equivalent to <code>new v
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
 	
-		on 2019-07-17T17:35:29+00:00
+		on 2019-08-28T17:42:18+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
